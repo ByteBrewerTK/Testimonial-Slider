@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.App{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9fbf6;
+}
+.Testimonial{
+  width: 700px;
+  text-align: center;
+
+  > h2{
+    font-size: 2.3rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30%;
+      height: 6px ;
+      background: #35A29F;
+      border-radius: .5rem;
+    }
+  }
+}
+.Card{
+  border-radius: .5rem;
+  padding: 2.5rem;
+  position: relative;
+  background: #fff;
+  filter: drop-shadow(-3px 2px 6px #000);
+
+
+  > img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 3%;
+    transform: translateY(-100%);
+    border-left: 8px solid #35A29F;
+    border-bottom: 8px solid #35A29F;
+    border-right: 1px solid #35A29F;
+    border-top: 1px solid #35A29F;
+    box-sizing: content-box;
+  }
+
+  > .title{
+
+    > .name{
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+    }
+    > .job-title{
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #35a29eb9;
+
+    }
+  }
+
+  > .quote{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #35A29F;
+  }
+
+  > .btn-change{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    
+      
+    > .btn-prev, .btn-next{
+      width: max-content;
+      padding: 0;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #35A29F;
+
+      &:hover{
+        scale: 1.1;
+      }
+      &:active{
+        scale: 1;
+      }
+    }
+  }
+
+  .btn-surprise{
+    font-size: 1.3rem;
+    padding: .7rem 1.9rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background: #35A29F;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+
